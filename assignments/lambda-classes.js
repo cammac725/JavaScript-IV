@@ -34,17 +34,14 @@ class Student extends Person {
     this.className = studentAtributes.className;
     this.favSubjects = studentAtributes.favSubjects;
   }
-  listsSubjects(favSubjects) {
-    const result = favSubjects.values();
-    for (const value of result) {
-      return value;
-    }
+  listsSubjects() {
+    return this.favSubjects.join(', ');
   }
   PRAssignment(subject) {
     return `${this.name} has submitted a PR for ${subject}`;
   }
   springChallenge(subject) {
-    return ` ${this.name} has begun sprint challenge on ${subject}`;
+    return `${this.name} has begun sprint challenge on ${subject}`;
   }
 }
 
@@ -58,7 +55,7 @@ class ProjectManager extends Instructor {
     return `${this.name} announces to ${channel}, @channel standy times!`;
   }
   debugsCode(student, subject) {
-    return `${name} debugs ${student.name}'s code on ${subject}`;
+    return `${this.name} debugs ${student.name}'s code on ${subject}`;
   }
 }
 
@@ -105,7 +102,7 @@ const bigKnell = new Instructor({
 })
 
 const joseph_thompson = new ProjectManager({
-  name: 'Josh Knell',
+  name: 'Joseph Thompson',
   age: 32,
   location: 'deep south',
   gender: 'male',
@@ -115,3 +112,10 @@ const joseph_thompson = new ProjectManager({
   gradClassName: 'WEBPT2',
   favInstructor: 'Josh Knell'
 })
+
+
+console.log(bigKnell.grade(cameron_macdonald, 'Javascript'));
+console.log(joseph_thompson.standUp('WEB18'));
+console.log(brellin.springChallenge('Javascript-IV'));
+console.log(cameron_macdonald.listsSubjects());
+console.log(joseph_thompson.debugsCode(joshz, 'Fortran'));
