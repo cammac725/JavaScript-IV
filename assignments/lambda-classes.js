@@ -28,7 +28,7 @@ class Instructor extends Person {
   changeGrade(student) {
     let signs = [1, -1];
     let randomSign = signs[Math.floor(Math.random() * signs.length)];
-    return student.grade = student.grade + (Math.floor(Math.random() * 20) - 10);
+    return student.grade = student.grade + (Math.floor(Math.random() * 10) * randomSign);
   }
 }
 
