@@ -42,6 +42,10 @@ class Humanoid extends CharacterStats {
   greet() {
     return `${this.name} offers a greeting in ${this.language}`;
   }
+  healing() {
+    this.healthPoints = this.healthPoints += 2;
+    return `${this.name} is feeling better, with ${this.healthPoints} health now.`
+  }
 }
 
 
@@ -54,6 +58,7 @@ class Hero extends Humanoid {
     villain.healthPoints = villain.healthPoints - hero.damage;
     return `${this.name} attacked ${villain.name} for ${this.damage}`;
   }
+
 }
 
 
@@ -68,8 +73,6 @@ class Villain extends Humanoid {
   }
 }
 
-
-// Test you work by un-commenting these 3 objects and the list of console logs below:
 
 const villain = new Villain({
   createdAt: new Date(),
@@ -156,7 +159,6 @@ const archer = new Humanoid({
 });
 
 
-
 console.log(mage.createdAt); // Today's date
 console.log(archer.dimensions); // { length: 1, width: 2, height: 4 }
 console.log(swordsman.healthPoints); // 15
@@ -168,11 +170,7 @@ console.log(archer.greet()); // Lilith offers a greeting in Elvish.
 console.log(mage.takeDamage()); // Bruce took damage.
 console.log(swordsman.destroy()); // Sir Mustachio was removed from the game.\
 
-console.log(hero.attack(villain));
+// console.log(hero.attack(villain));
+console.log(villain.healing());
+
 console.log(villain.healthPoints);
-
-
-  // Stretch task: 
-  // * Create Villain and Hero constructor functions that inherit from the Humanoid constructor function.  
-  // * Give the Hero and Villains different methods that could be used to remove health points from objects which could result in destruction if health gets to 0 or drops below 0;
-  // * Create two new objects, one a villain and one a hero and fight it out with methods!
