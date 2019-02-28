@@ -25,6 +25,9 @@ class Instructor extends Person {
   grade(student, subject) {
     return `${student.name} receives a perfect score on ${subject}`;
   }
+  changeGrade(student) {
+    return student.grade = student.grade - (Math.floor(Math.random() * 20) - 10);
+  }
 }
 
 class Student extends Person {
@@ -33,6 +36,7 @@ class Student extends Person {
     this.previousBackground = studentAtributes.previousBackground;
     this.className = studentAtributes.className;
     this.favSubjects = studentAtributes.favSubjects;
+    this.grade = studentAtributes.grade;
   }
   listsSubjects() {
     return this.favSubjects.join(', ');
@@ -66,6 +70,7 @@ const cameron_macdonald = new Student({
   gender: 'male',
   favLanguage: 'Javascript',
   className: 'WEB18',
+  grade: 90,
   previousBackground: 'martial arts instructor, Honda tech, computer support tech',
   favSubjects: ['CSS', 'Javascript', 'golf', 'Scotland']
 })
@@ -74,6 +79,7 @@ const joshz = new Student({
   name: "Josh Zieger",
   age: 35,
   gender: "Male",
+  grade: 90,
   location: "Scranton, PA",
   previousBackground: "Food Safety Manager , Commercial Hydroponic Grower",
   className: "WEB15",
@@ -85,6 +91,7 @@ const brellin = new Student({
   age: 26,
   location: 'Tuscola, Texas',
   gender: 'Male',
+  grade: 90,
   previousBackground: 'Army',
   className: 'WEB18',
   favSubjects: ['PHP', 'CSS', 'JavaScript']
@@ -119,3 +126,4 @@ console.log(joseph_thompson.standUp('WEB18'));
 console.log(brellin.springChallenge('Javascript-IV'));
 console.log(cameron_macdonald.listsSubjects());
 console.log(joseph_thompson.debugsCode(joshz, 'Fortran'));
+console.log(bigKnell.changeGrade(cameron_macdonald));

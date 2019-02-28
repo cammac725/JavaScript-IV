@@ -53,6 +53,8 @@ const fred = new Person({
 
 ## `lambda-classes` - We need a roster of Lambda School personnel. Build it!
 
+## DONE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 * We have a school to build here! This project will get you used to thinking about classes in JavaScript and building them from a brand new data set.
 * Lambda personnel can be broken down into three different types of `people`.
   * **Instructors** - extensions of Person
