@@ -26,7 +26,9 @@ class Instructor extends Person {
     return `${student.name} receives a perfect score on ${subject}`;
   }
   changeGrade(student) {
-    return student.grade = student.grade - (Math.floor(Math.random() * 20) - 10);
+    let signs = [1, -1];
+    let randomSign = signs[Math.floor(Math.random() * signs.length)];
+    return student.grade = student.grade + (Math.floor(Math.random() * 20) - 10);
   }
 }
 
