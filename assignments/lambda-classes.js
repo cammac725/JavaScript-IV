@@ -62,3 +62,56 @@ class ProjectManager extends Instructor {
   }
 }
 
+const cameron_macdonald = new Student({
+  name: 'Cam',
+  age: 58,
+  location: 'Port Angeles, WA',
+  gender: 'male',
+  favLanguage: 'Javascript',
+  className: 'WEB18',
+  previousBackground: 'martial arts instructor, Honda tech, computer support tech',
+  favSubjects: ['CSS', 'Javascript', 'golf', 'Scotland']
+})
+
+const joshz = new Student({
+  name: "Josh Zieger",
+  age: 35,
+  gender: "Male",
+  location: "Scranton, PA",
+  previousBackground: "Food Safety Manager , Commercial Hydroponic Grower",
+  className: "WEB15",
+  favSubjects: ["CSS", "React", "Spaaaace!", "early american history"],
+})
+
+const brellin = new Student({
+  name: 'Will Umstead',
+  age: 26,
+  location: 'Tuscola, Texas',
+  gender: 'Male',
+  previousBackground: 'Army',
+  className: 'WEB18',
+  favSubjects: ['PHP', 'CSS', 'JavaScript']
+})
+
+
+const bigKnell = new Instructor({
+  name: 'Josh Knell',
+  age: 35,
+  location: 'USA',
+  gender: 'male',
+  favLanguage: 'Javascript',
+  specialty: 'helping students understand',
+  catchPhrase: 'Yeeessss!'
+})
+
+const joseph_thompson = new ProjectManager({
+  name: 'Josh Knell',
+  age: 32,
+  location: 'deep south',
+  gender: 'male',
+  favLanguage: 'Javascript',
+  specialty: 'keeping us calm',
+  catchPhrase: 'Y\'all',
+  gradClassName: 'WEBPT2',
+  favInstructor: 'Josh Knell'
+})
