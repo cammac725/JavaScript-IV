@@ -49,6 +49,13 @@ class Student extends Person {
   springChallenge(subject) {
     return `${this.name} has begun sprint challenge on ${subject}`;
   }
+  graduates() {
+    if (this.grade >= 70) {
+      return `Congratulations! Lambda School says ${this.name} is ready to graduate!`;
+    } else {
+      return `${this.name} needs to bring their grade up.`;
+    }
+  }
 }
 
 class ProjectManager extends Instructor {
@@ -72,7 +79,7 @@ const cameron_macdonald = new Student({
   gender: 'male',
   favLanguage: 'Javascript',
   className: 'WEB18',
-  grade: 90,
+  grade: 75,
   previousBackground: 'martial arts instructor, Honda tech, computer support tech',
   favSubjects: ['CSS', 'Javascript', 'golf', 'Scotland']
 })
@@ -81,7 +88,7 @@ const joshz = new Student({
   name: "Josh Zieger",
   age: 35,
   gender: "Male",
-  grade: 90,
+  grade: 75,
   location: "Scranton, PA",
   previousBackground: "Food Safety Manager , Commercial Hydroponic Grower",
   className: "WEB15",
@@ -93,7 +100,7 @@ const brellin = new Student({
   age: 26,
   location: 'Tuscola, Texas',
   gender: 'Male',
-  grade: 90,
+  grade: 75,
   previousBackground: 'Army',
   className: 'WEB18',
   favSubjects: ['PHP', 'CSS', 'JavaScript']
@@ -129,3 +136,4 @@ console.log(brellin.springChallenge('Javascript-IV'));
 console.log(cameron_macdonald.listsSubjects());
 console.log(joseph_thompson.debugsCode(joshz, 'Fortran'));
 console.log(bigKnell.changeGrade(cameron_macdonald));
+console.log(cameron_macdonald.graduates());
